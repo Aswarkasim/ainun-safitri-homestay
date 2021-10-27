@@ -19,4 +19,16 @@ class Order extends Model
         //     ->leftJoin('users', 'users.id', '=', 'order.user_id')->get();
 
     }
+
+
+
+    function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    function room()
+    {
+        return $this->belongsTo(Room::class);
+    }
 }

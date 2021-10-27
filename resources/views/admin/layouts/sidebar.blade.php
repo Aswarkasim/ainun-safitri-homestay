@@ -20,32 +20,30 @@
                         <span>Dashboard</span>
                     </a>
                 </li>
+                
+                
+                <li class="sidebar-item {{Request::is('admin/order*') ? 'active' : ''}}">
+                    <a href="/admin/order" class='sidebar-link'>
+                        <i class="fa fa-exchange"></i>
+                        <span>Order</span>
+                    </a>
+                </li>
 
-                    <li class="sidebar-item {{Request::is('admin/room*') ? 'active' : ''}}">
+                <li class="sidebar-item {{Request::is('admin/room*') ? 'active' : ''}}">
                     <a href="/admin/room" class='sidebar-link'>
                         <i class="fa fa-building"></i>
                         <span>Room</span>
                     </a>
                 </li>
 
-                <li class="sidebar-item  has-sub">
-                    <a href="#" class='sidebar-link'>
-                        <i class="bi bi-person-badge-fill"></i>
-                        <span>Authentication</span>
+                  <li class="sidebar-item">
+                    <a href="/logout" class='sidebar-link'>
+                        <i class="fa fa-building"></i>
+                        <span>Logout</span>
                     </a>
-                    <ul class="submenu ">
-                        <li>
-                            <a href="auth-login.html">Login</a>
-                        </li>
-                        <li>
-                            <a href="auth-register.html">Register</a>
-                        </li>
-                        <li>
-                            <a href="auth-forgot-password.html">Forgot Password</a>
-                        </li>
-                    </ul>
                 </li>
 
+              
                 
 
             </ul>

@@ -20,7 +20,8 @@ class Order extends Migration
             $table->date('date_start');
             $table->date('date_end')->nullable();
             $table->integer('jumlah_hari');
-            $table->boolean('status');
+            $table->text('bukti')->nullable();
+            $table->enum('status', ['Menunggu', 'Valid', 'Tidak Valid', 'Belum']);
             $table->double('total');
             $table->timestamps();
         });

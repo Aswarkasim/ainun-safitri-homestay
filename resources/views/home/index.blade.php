@@ -152,18 +152,21 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6 p-0" style="">
+
+      @foreach ($rooms as $room)
+          
+      <div class="col-md-6 px-3" style="">
         <div class="d-flex shadow-sm">
           <div class="" style="max-width: 250px; max-height: 250px; overflow: hidden;">
-            <img src="/img/img1.jpg" alt="" class="m-2" width="100%">
+            <img src="/{{$room->gambar}}" alt="" class="m-2" width="100%">
           </div>
           <div class="p-3">
-            <a href="" class="text-decoration-none"><h5><b>Kiruna Island</b></h5></a>
+            <a href="" class="text-decoration-none"><h5><b>{{$room->title}}</b></h5></a>
             <span class="text-muted">
               <i class="fa fa-map-marker text-muted"></i> 
-              Pantai Bira
+              {{$room->alamat}}
             </span><br>
-            <b class="text-success">Rp. 200.000</b>
+            <b class="text-success">{{format_rupiah($room->harga)}}</b>
             <div class="d-grid gap-2">
               <button class="btn btn-primary mt-2 px-5" type="button">Pesan Sekarang</button>
             </div>
@@ -171,6 +174,7 @@
         </div>
       </div>
       
+      @endforeach
 
       
     </div>

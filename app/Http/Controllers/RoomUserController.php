@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\General;
 use App\Models\Order;
 use App\Models\Room;
 use Illuminate\Http\Request;
@@ -50,18 +51,15 @@ class RoomUserController extends Controller
 
     function invoice($id)
     {
-        // $order = Order::leftJoin('rooms', 'rooms.id', '=', 'order.room_id')
-        //     ->find($id)
-        //     ->get();
+        // $order = DB::table('order')
+        //     ->leftJoin('rooms', 'rooms.id', '=', 'order.room_id')
+        //     ->leftJoin('users', 'users.id', '=', 'order.user_id')
+        //     ->where('order.id', $id)
+        //     ->first(['order.*', 'rooms.title', 'users.name']);
 
-        $order = DB::table('order')
-            ->leftJoin('rooms', 'rooms.id', '=', 'order.room_id')
-            ->leftJoin('users', 'users.id', '=', 'order.user_id')
-            ->where('order.id', $id)
-            ->first(['order.*', 'rooms.title', 'users.name']);
+        // $order = General::first()->getOrderDetail($id);
 
-        // echo $order->id;
-        // print_r($order);
+        $order = Order::with(['user', 'room'])->find($id);
 
         return view('layouts.wrapper', [
             'order'     => $order,

@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardAdminController;
 use App\Http\Controllers\DashboardUserController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\OrderAdminController;
 use App\Http\Controllers\RoomAdminController;
 use App\Http\Controllers\RoomUserController;
 
@@ -18,18 +20,13 @@ use App\Http\Controllers\RoomUserController;
 |
 */
 
-Route::get('/', function () {
-    return view('layouts/wrapper', [
-        'content'     => 'home/index'
-    ]);
-});
+// Route::get('/', function () {
+//     return view('layouts/wrapper', [
+//         'content'     => 'home/index'
+//     ]);
+// });
 
 
-Route::get('/', function () {
-    return view('layouts/wrapper', [
-        'content'      => 'home/index'
-    ]);
-});
 
 
 Route::get('/login', [AuthController::class, 'index'])->middleware('guest');
@@ -43,6 +40,7 @@ Route::post('/register', [AuthController::class, 'doRegister']);
 
 
 // ========== H O M E ============
+Route::get('/', [HomeController::class, 'index']);
 Route::get('/dashboard', [DashboardUserController::class, 'index']);
 Route::get('/room', [RoomUserController::class, 'index']);
 Route::get('/room/show/{id}', [RoomUserController::class, 'show']);
@@ -54,3 +52,5 @@ Route::post('/room/submitOrder', [RoomUserController::class, 'submitOrder']);
 // ============= A D M I N ==============
 Route::get('/admin/dashboard', [DashboardAdminController::class, 'index']);
 Route::resource('/admin/room', RoomAdminController::class);
+
+Route::get('/admin/order', [OrderAdminController::class, 'index']);

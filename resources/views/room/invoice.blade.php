@@ -16,7 +16,7 @@
                                 <td>Kepada</td>
                             </tr>
                             <tr class="content">
-                                <td class="font-weight-bold">{{$order->name}}a</td>
+                                <td class="font-weight-bold">{{$order->user->name}}a</td>
                             </tr>
                         </tbody>
                     </table>
@@ -31,7 +31,7 @@
                                 <th>Total</th>
                             </tr>
                             <tr>
-                                <td>{{$order->title}}</td>
+                                <td>{{$order->room->title}}</td>
                                 <td>{{$order->jumlah_hari}}</td>
                                 <td>{{format_rupiah($order->total)}}</td>
                             </tr>
