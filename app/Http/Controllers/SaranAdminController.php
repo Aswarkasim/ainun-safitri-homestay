@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Order;
+use App\Models\Saran;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
-class OrderAdminController extends Controller
+class SaranAdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,13 +16,13 @@ class OrderAdminController extends Controller
     public function index()
     {
         //
-        // die();
-        $orders = Order::with(['user', 'room'])->get();
+        // die('ada');
+        $saran = Saran::get();
 
         return view('admin.layouts.wrapper', [
-            'title'    => 'Manajemen Room',
-            'orders'     => $orders,
-            'content'   => 'admin/order/index'
+            'title'    => 'Saran',
+            'saran'     => $saran,
+            'content'   => 'admin/saran/index'
         ]);
     }
 
@@ -53,10 +53,22 @@ class OrderAdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Saran $saran)
     {
         //
+        // $saran = Saran::find();
+        $data = [
+            'is_read'   => true
+        ];
+        $saran->update($data);
+
+        return view('admin.layouts.wrapper', [
+            'title'    => 'Saran',
+            'saran'     => $saran,
+            'content'   => 'admin/saran/detail'
+        ]);
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -87,11 +99,11 @@ class OrderAdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Order $order)
+    public function destroy(Saran $saran)
     {
         //
-        $order->delete();
+        $saran->delete();
         Alert::success('Sukses', 'Data dihapus');
-        return redirect('/admin/order');
+        return redirect('/admin/saran');
     }
 }

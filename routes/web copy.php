@@ -40,6 +40,12 @@ Route::post('/room/submitOrder', [RoomUserController::class, 'submitOrder'])->mi
 // ============= A D M I N ==============
 Route::get('/admin/dashboard', [DashboardAdminController::class, 'index']);
 Route::resource('/admin/room', RoomAdminController::class);
-Route::resource('/admin/saran', SaranAdminController::class)->middleware('auth');
+Route::get('/admn/saran', function () {
+  return view('admin.layouts.wrapper', [
+    'title'    => 'Saran',
+    'content'   => 'admin/saran/index'
+  ]);
+});
+// Route::get('/admin/saran', [SaranAdminController::class, 'index']);
 
-Route::resource('/admin/order', OrderAdminController::class);
+Route::get('/admin/order', [OrderAdminController::class, 'index']);

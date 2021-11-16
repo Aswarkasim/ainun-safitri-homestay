@@ -36,6 +36,13 @@
                     </a>
                 </li>
 
+                 <li class="sidebar-item {{Request::is('admin/saran*') ? 'active' : ''}}">
+                    <a href="/admin/saran" class='sidebar-link'>
+                        <i class="fa fa-envelope"></i>
+                        <span>Saran</span>
+                    </a>
+                </li>
+
                   <li class="sidebar-item">
                     <a href="/logout" class='sidebar-link'>
                         <i class="fa fa-building"></i>

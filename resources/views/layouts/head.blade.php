@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  <title>Kelasta</title>
+  <title>Homestay</title>
 
 
   <!-- Bootstrap core CSS -->
@@ -16,3 +16,12 @@
 
   <meta name="theme-color" content="#7952b3">
 
+<style>
+
+  .container{
+    width: 70%;
+  }
+</style>
+
+</head>
+<body>

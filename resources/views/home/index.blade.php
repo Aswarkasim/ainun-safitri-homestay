@@ -1,9 +1,4 @@
 <style>
-  /* GLOBAL STYLES
--------------------------------------------------- */
-/* Padding below the footer and lighter body text */
-
-
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
@@ -90,8 +85,8 @@
 </style>
 
 <main>
-
   <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -168,7 +163,7 @@
             </span><br>
             <b class="text-success">{{format_rupiah($room->harga)}}</b>
             <div class="d-grid gap-2">
-              <button class="btn btn-primary mt-2 px-5" type="button">Pesan Sekarang</button>
+              <a href="/room/show/{{$room->id}}" class="btn btn-primary mt-2 px-5">Pesan Sekarang</a>
             </div>
           </div>
         </div>

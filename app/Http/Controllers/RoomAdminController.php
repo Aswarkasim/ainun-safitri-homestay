@@ -16,6 +16,7 @@ class RoomAdminController extends Controller
     public function index()
     {
         //
+
         $room = Room::get();
         return view('admin.layouts.wrapper', [
             'title'    => 'Manajemen Room',

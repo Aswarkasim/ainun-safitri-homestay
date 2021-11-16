@@ -5,10 +5,10 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-title">Coming Soon!</h5>
+                    <h5 class="card-title">Dashboard</h5>
                 </div>
                 <div class="card-body">
-                    If you want to contribute. Check out this <a href="https://github.com/zuramai/mazer" target="_blank">template repository</a>.
+                   {{-- Dashboard --}}
                 </div>
             </div>
         </div>
