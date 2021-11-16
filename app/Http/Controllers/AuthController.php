@@ -54,6 +54,7 @@ class AuthController extends Controller
         ]);
 
         $data['password']   = Hash::make($data['password']);
+        $data['role']   = 'user';
         User::create($data);
         return redirect('/login')->with('success', 'Registration success');
     }

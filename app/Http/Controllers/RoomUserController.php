@@ -41,7 +41,7 @@ class RoomUserController extends Controller
             'date_start' => $request->date_start,
             // 'date_end' => $request->date_end,
             'total' => $request->total,
-            'status'    => 0
+            'status'    => 'Menunggu'
         ];
         // print_r($data);
         DB::table('order')->insert($data);
