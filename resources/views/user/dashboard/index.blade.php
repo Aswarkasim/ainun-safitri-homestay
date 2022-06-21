@@ -7,7 +7,7 @@
       </div>
       </div>
 
-      <h5 class="text-center"><strong>Aswar Kasim</strong></h5>
+      <h5 class="text-center"><strong>{{auth()->user()->name}}</strong></h5>
 
     </div>
 
