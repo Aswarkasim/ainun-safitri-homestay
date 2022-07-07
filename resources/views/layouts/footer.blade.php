@@ -5,8 +5,8 @@
    </footer>
 
    <script src="/assets/home/js/bootstrap.bundle.min.js"></script>
-   {{-- <script src="js/sweetalert2.all.min.js"></script>
-   <script src="js/mySwal.js"></script> --}}
+<script src="js/sweetalert2.all.min.js"></script>
+   {{-- <script src="js/mySwal.js"></script>  --}}
 
    </body>
 

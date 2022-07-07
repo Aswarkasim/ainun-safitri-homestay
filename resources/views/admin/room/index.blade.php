@@ -1,5 +1,10 @@
 
-
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                
+                
 <a href="/admin/room/create" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah</a>
 
 <table class='table table-striped' id="table1">
@@ -36,3 +41,8 @@
         
     </tbody>
 </table>
+
+</div>
+        </div>
+    </div>
+</div>

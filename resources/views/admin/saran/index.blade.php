@@ -1,5 +1,8 @@
 
-
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
 
 <table class='table table-striped' id="table1">
     <thead>
@@ -34,3 +37,8 @@
         
     </tbody>
 </table>
+
+</div>
+        </div>
+    </div>
+</div>

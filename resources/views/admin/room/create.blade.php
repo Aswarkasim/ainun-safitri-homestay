@@ -1,3 +1,9 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                
+
 <a href="/admin/room" class="btn btn-secondary"><i class="fa fa-arrow-left"></i> Kembali</a>
 
 
@@ -128,6 +134,10 @@
 
     </form>
 
+    </div>
+        </div>
+    </div>
+</div>
 
     {{-- <script src="/ckeditor/ckeditor.js"></script>
 <script>

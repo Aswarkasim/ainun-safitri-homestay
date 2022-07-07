@@ -1,27 +1,56 @@
-   <footer>
-                <div class="footer clearfix mb-0 text-muted">
-                    <div class="float-start">
-                        <p>2021 &copy; Mazer</p>
-                    </div>
-                    <div class="float-end">
-                        <p>Crafted with <span class='text-danger'><i class="bi bi-heart"></i></span> by <a href="http://ahmadsaugi.com">A. Saugi</a></p>
-                    </div>
-                </div>
-            </footer>
-
-        </div>
+  {{-- </div> --}}
+<!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="float-right d-none d-sm-inline">
+      Anything you want
     </div>
-    <script src="/assets/admin/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="/assets/admin/js/bootstrap.bundle.min.js"></script>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+  </footer>
+</div>
+<!-- ./wrapper -->
 
-    <script src="/assets/admin/vendors/simple-datatables/simple-datatables.js"></script>
-    <script>
-        // Simple Datatable
-        let table1 = document.querySelector('#table1');
-        let dataTable = new simpleDatatables.DataTable(table1);
-    </script>
+<!-- REQUIRED SCRIPTS -->
 
-    <script src="/assets/admin/js/main.js"></script>
+<!-- jQuery -->
+<script src="/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="/dist/js/adminlte.min.js"></script>
+<script src="/vendor/sweetalert/sweetalert2.all.min.js"></script>
+
+<script>
+     // Tommbol hapus
+  $('.tombol-hapus').on('click', function (e) {
+    // Mematikan href
+    e.preventDefault();
+    // const href = $(this).attr('href');
+    // const action = $(this).attr('action');
+
+    let id = $(this).data('id');
+
+    Swal({
+      title: 'Apakah anda yakin ingin menghapus?',
+      text: "data akan dihapus",
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Hapus Data!'
+    }).then((result) => {
+      if (result.value) {
+        // document.location.href = href;
+        // document.location.action = action;
+        // document.getElementById("#delete").setValue('Adakah');
+        // console.log(result);
+        $('#form-delete').submit();
+      }
+    })
+})
+</script>
+
+
 </body>
-
 </html>

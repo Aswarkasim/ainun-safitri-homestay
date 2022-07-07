@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminBannerControleller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ContactUserController;
@@ -13,7 +14,7 @@ use App\Http\Controllers\SaranAdminController;
 
 Route::get('/login', [AuthController::class, 'index'])->middleware('guest');
 Route::post('/login', [AuthController::class, 'doLogin']);
-Route::get('/logout', [AuthController::class, 'logout']);
+Route::get('/logout', [AuthController::class, 'logout'])->name('login');
 
 
 
@@ -38,8 +39,13 @@ Route::post('/room/submitOrder', [RoomUserController::class, 'submitOrder'])->mi
 
 
 // ============= A D M I N ==============
-Route::get('/admin/dashboard', [DashboardAdminController::class, 'index']);
-Route::resource('/admin/room', RoomAdminController::class);
-Route::resource('/admin/saran', SaranAdminController::class)->middleware('auth');
 
-Route::resource('/admin/order', OrderAdminController::class);
+Route::prefix('/admin')->middleware('auth')->group(function () {
+
+  Route::get('/dashboard', [DashboardAdminController::class, 'index']);
+  Route::resource('/room', RoomAdminController::class);
+  Route::resource('/saran', SaranAdminController::class);
+  Route::resource('/banner', AdminBannerControleller::class);
+
+  Route::resource('/order', OrderAdminController::class);
+});

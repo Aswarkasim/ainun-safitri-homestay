@@ -11,6 +11,7 @@
   <!-- Bootstrap core CSS -->
   <link href="/assets/home/css/bootstrap-mytheme.css" rel="stylesheet">
   <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/dist/css/ktchome.css">
   <script src="/assets/plugins/jquery/dist/jquery.min.js"></script>
 
 
