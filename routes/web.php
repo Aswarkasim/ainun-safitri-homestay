@@ -13,8 +13,8 @@ use App\Http\Controllers\RoomUserController;
 use App\Http\Controllers\SaranAdminController;
 
 Route::get('/login', [AuthController::class, 'index'])->middleware('guest');
-Route::post('/login', [AuthController::class, 'doLogin']);
-Route::get('/logout', [AuthController::class, 'logout'])->name('login');
+Route::post('/login', [AuthController::class, 'doLogin'])->name('login');
+Route::get('/logout', [AuthController::class, 'logout']);
 
 
 
