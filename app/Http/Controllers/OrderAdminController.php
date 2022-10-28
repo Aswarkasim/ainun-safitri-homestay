@@ -17,7 +17,7 @@ class OrderAdminController extends Controller
     {
         //
         // die();
-        $orders = Order::with(['user', 'room'])->get();
+        $orders = Order::with(['user', 'room'])->paginate(10);
 
         return view('admin.layouts.wrapper', [
             'title'    => 'Manajemen Room',
