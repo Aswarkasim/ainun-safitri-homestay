@@ -23,7 +23,7 @@
         <tr>
             <td>{{$loop->iteration}}</td>
             <td>{{$row->user->name}}</td>
-            <td>{{ iseet($row->room) ? $row->room->title : 'Data Kosong'}}</td>
+            <td>{{ isset($row->room) ? $row->room->title : 'Data Kosong'}}</td>
             <td>{{ format_rupiah($row->total)}}</td>
             <td><span class="badge bg-primary">Valid</span></td>
             <td>
