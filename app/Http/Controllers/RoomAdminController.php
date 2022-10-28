@@ -17,7 +17,7 @@ class RoomAdminController extends Controller
     {
         //
 
-        $room = Room::paginate(5);
+        $room = Room::paginate(10);
         return view('admin.layouts.wrapper', [
             'title'    => 'Manajemen Room',
             'room'      => $room,

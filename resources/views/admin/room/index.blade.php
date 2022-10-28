@@ -42,6 +42,7 @@
     </tbody>
 </table>
 
+
 {{ $room->links() }}
 
 </div>
