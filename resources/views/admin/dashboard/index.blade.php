@@ -1,5 +1,7 @@
 
 
+<div class="alert alert-success">Halo, {{ auth()->user()->name }}. Selamat Datang di halaman Admin !! 😀😀</div>
+
 <section class="section">
     <div class="row">
         <div class="col-12">
