@@ -16,7 +16,7 @@
                                 <td>Kepada</td>
                             </tr>
                             <tr class="content">
-                                <td class="font-weight-bold">{{$order->user->name}}a</td>
+                                <td class="font-weight-bold">{{$order->user->name}}</td>
                             </tr>
                         </tbody>
                     </table>

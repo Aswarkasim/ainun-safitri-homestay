@@ -28,7 +28,7 @@
           <td>{{$row->jumlah_hari. ' Hari'}}</td>
           <td>{{$row->status}}</td>
           <td>
-            <a href="/dashboard/detailOrder/{{$row->id}}" class="bt btn-sm btn-info text-decoration-none"><i class="fa fa-info"></i> Detail</a>
+            <a href="/room/invoice/{{$row->id}}" class="bt btn-sm btn-info text-decoration-none"><i class="fa fa-info"></i> Detail</a>
           </td>
         </tr>
         @endforeach
