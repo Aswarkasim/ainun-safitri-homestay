@@ -10,7 +10,9 @@ class Order extends Model
 {
     use HasFactory;
 
-    protected $table = 'order';
+    // protected $table = 'order';
+
+    protected $guarded = [];
 
     function invoice()
     {
