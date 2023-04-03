@@ -1,6 +1,6 @@
 
 
-<div class="alert alert-success">Halo, {{ auth()->user()->name }}. Selamat Datang di halaman Admin !! 😀😀</div>
+<div class="alert alert-info">Halo, {{ auth()->user()->name }}. Selamat Datang di halaman Admin !! 😀😀</div>
 
 <section class="section">
     <div class="row">
