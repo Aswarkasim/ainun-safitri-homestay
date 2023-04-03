@@ -34,7 +34,7 @@ class RoomUserController extends Controller
     function submitOrder(Request $request)
     {
         $data = [
-            'id'       => mt_rand(1000000000, 9999999999),
+            // 'id'       => mt_rand(100000, 9999999),
             'user_id'   => auth()->user()->id,
             'room_id'   => $request->room_id,
             'jumlah_hari' => $request->jumlah_hari,
@@ -44,9 +44,10 @@ class RoomUserController extends Controller
             'status'    => 'Menunggu'
         ];
         // print_r($data);
-        DB::table('order')->insert($data);
+        $room = Order::create($data);
+        // dd($room);
         Alert::success('Order dibuat', 'Silakan lakukan pembayaran');
-        return redirect('room/invoice/' . $data['id']);
+        return redirect('room/invoice/' . $room->id);
     }
 
     function invoice($id)
