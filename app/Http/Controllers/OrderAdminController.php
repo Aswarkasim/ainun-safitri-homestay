@@ -22,6 +22,7 @@ class OrderAdminController extends Controller
         $user_id = auth()->user()->user_id;
 
         if ($role == 'admin') {
+            $orders = Order::with(['user', 'room'])->paginate(10);
         } else {
             $orders = Order::with(['user', 'room'])->whereUserId($user_id)->paginate(10);
         }
