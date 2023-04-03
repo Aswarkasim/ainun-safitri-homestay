@@ -17,7 +17,14 @@ class OrderAdminController extends Controller
     {
         //
         // die();
-        $orders = Order::with(['user', 'room'])->paginate(10);
+
+        $role = auth()->user()->role;
+        $user_id = auth()->user()->user_id;
+
+        if ($role == 'admin') {
+        } else {
+            $orders = Order::with(['user', 'room'])->whereUserId($user_id)->paginate(10);
+        }
 
         return view('admin.layouts.wrapper', [
             'title'    => 'Manajemen Room',

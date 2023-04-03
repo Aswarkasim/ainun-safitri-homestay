@@ -45,7 +45,6 @@
               </p>
             </a>
           </li>
-          @endif
 
            <li class="nav-item">
             <a href="/admin/saran" class="nav-link {{Request::is('admin/saran*') ? 'active' : ''}}">
@@ -64,6 +63,9 @@
               </p>
             </a>
           </li>
+
+          @endif
+
 
      
         </ul>
