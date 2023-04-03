@@ -34,6 +34,9 @@
             </a>
           </li>
 
+
+          @if (auth()->user()->role == 'admin')
+              
           <li class="nav-item">
             <a href="/admin/room" class="nav-link {{Request::is('admin/room*') ? 'active' : ''}}">
               <i class="nav-icon fas fa-building"></i>
@@ -42,6 +45,7 @@
               </p>
             </a>
           </li>
+          @endif
 
            <li class="nav-item">
             <a href="/admin/saran" class="nav-link {{Request::is('admin/saran*') ? 'active' : ''}}">
