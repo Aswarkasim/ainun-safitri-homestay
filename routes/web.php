@@ -47,5 +47,6 @@ Route::prefix('/admin')->middleware('auth')->group(function () {
   Route::resource('/saran', SaranAdminController::class);
   Route::resource('/banner', AdminBannerControleller::class);
 
+  Route::post('/order/ubah-status', [OrderAdminController::class, 'ubahStatus']);
   Route::resource('/order', OrderAdminController::class);
 });

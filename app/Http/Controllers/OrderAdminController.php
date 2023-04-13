@@ -34,6 +34,22 @@ class OrderAdminController extends Controller
         ]);
     }
 
+    function ubahStatus(Request $request)
+    {
+        // dd($request->all());
+        $order_id = $request->order_id;
+        $status = $request->status;
+
+        $order = Order::find($order_id);
+        $data = [
+            'status'    => $status
+        ];
+
+        $order->update($data);
+        Alert::success('Sukses', 'Status diubah');
+        return redirect('/admin/order/' . $order_id);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -64,6 +80,14 @@ class OrderAdminController extends Controller
     public function show($id)
     {
         //
+
+        $order = Order::with(['user', 'room'])->find($id);
+
+        return view('admin.layouts.wrapper', [
+            'title'    => 'Manajemen Room',
+            'order'     => $order,
+            'content'   => 'admin/order/show'
+        ]);
     }
 
     /**

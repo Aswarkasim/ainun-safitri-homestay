@@ -54,6 +54,8 @@ class RoomAdminController extends Controller
             'alamat'      => 'required',
             'desc'      => 'required',
             'gambar'      => 'required',
+            'kapasitas'      => 'required',
+            'available'      => 'required',
             'jumlah'      => 'required'
         ]);
 
@@ -116,6 +118,8 @@ class RoomAdminController extends Controller
             'harga'     => 'required|numeric',
             'alamat'      => 'required',
             'desc'      => 'required',
+            'kapasitas'      => 'required',
+            'available'      => 'required',
             'jumlah'      => 'required'
         ]);
 

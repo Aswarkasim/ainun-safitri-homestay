@@ -22,7 +22,7 @@
         @foreach ($orders as $row)
         <tr>
             <td>{{$loop->iteration}}</td>
-            <td>{{ isset($row->user) ? $row->user->name : 'Data Kosong'}}</td>
+            <td><a href="/admin/order/{{ $row->id }}"><b>{{ isset($row->user) ? $row->user->name : 'Data Kosong'}}</b></a></td>
             <td>{{ isset($row->room) ? $row->room->title : 'Data Kosong'}}</td>
             <td>{{ format_rupiah($row->total)}}</td>
             {{-- <td><span class="badge bg-primary">Valid</span></td> --}}

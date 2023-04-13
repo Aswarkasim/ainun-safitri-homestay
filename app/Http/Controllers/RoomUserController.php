@@ -14,9 +14,17 @@ class RoomUserController extends Controller
     //
     function index()
     {
-        $room = Room::get();
+        $cari = request('cari');
+
+        if ($cari) {
+            $rooms = Room::where('title', 'like', '%' . $cari . '%')->paginate(10);
+        } else {
+            $rooms = Room::paginate(10);
+        }
+
+
         return view('layouts.wrapper', [
-            'room'      => $room,
+            'room'      => $rooms,
             'content'   => 'room/index'
         ]);
     }

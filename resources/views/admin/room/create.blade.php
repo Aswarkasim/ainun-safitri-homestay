@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-7">
         <div class="card">
             <div class="card-body">
                 
@@ -85,6 +85,23 @@
         </div>
 
 
+        <div class="row">
+            <div class="col-md-3">
+                <label for="" class="pull-right">Kapasitas/Room</label>
+            </div>
+            <div class="col-md-9">
+                <div class="form-group">
+                    <input type="text" class="form-control @error('kapasitas') is-invalid @enderror" name="kapasitas" value=" {{isset($room) ? $room->kapasitas : old('kapasitas')}}">
+                    @error('kapasitas')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>
+                    @enderror
+                </div>
+            </div>
+        </div>
+
+
          <div class="row">
             <div class="col-md-3">
                 <label for="" class="pull-right">Gambar</label>
@@ -99,8 +116,29 @@
                     @enderror
 <br>
                     <?php if(isset($room)){ ?>
-                         <img src="{{$room->gambar}}" width="200px" alt="">
+                         <img src="/{{$room->gambar}}" width="200px" alt="">
                     <?php } ?>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-3">
+                <label for="" class="pull-right">Available</label>
+            </div>
+            <div class="col-md-9">
+                <div class="form-group">
+                    <select class="form-control  @error('available') is-invalid @enderror"  name="available"  value="" placeholder="available">
+                        <option value="">--available--</option>
+                        <option value="Tersedia" {{ isset($room) ? $room->available == 'Tersedia' ? 'selected' : '' : '' }}>Tersedia</option>
+                        <option value="Tidak" {{ isset($room) ? $room->available == 'Tidak' ? 'selected' : '' : '' }}>Tidak</option>
+                     </select>
+                    @error('available')
+                    <div class="invalid-feedback">
+                        {{$message}}
+                    </div>
+                    @enderror
                 </div>
             </div>
         </div>
@@ -138,6 +176,7 @@
         </div>
     </div>
 </div>
+{{-- @dd($room->available) --}}
 
     {{-- <script src="/ckeditor/ckeditor.js"></script>
 <script>

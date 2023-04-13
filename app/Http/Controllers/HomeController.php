@@ -11,7 +11,14 @@ class HomeController extends Controller
     //
     function index()
     {
-        $rooms = Room::paginate(10);
+
+        $cari = request('cari');
+
+        if ($cari) {
+            $rooms = Room::where('title', 'like', '%' . $cari . '%')->paginate(10);
+        } else {
+            $rooms = Room::paginate(10);
+        }
         $banner = Banner::all();
         return view('layouts/wrapper', [
             'rooms'        => $rooms,

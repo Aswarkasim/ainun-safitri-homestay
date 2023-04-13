@@ -45,6 +45,18 @@
         <h4 class="text-center"><strong>Rekomendasi</strong></h4>
       </div>
     </div>
+    
+
+    <div class="row">
+      <div class="offset-7 col-md-5">
+        <form action="/" class="form-inline mt-2 mt-md-0">
+          <div class="d-flex">
+            <input class="form-control mr-sm-2" name="cari" type="text" placeholder="Cari" aria-label="Cari">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cari</button>
+          </div>
+        </form>
+      </div>
+    </div>
     <div class="row">
 
       @foreach ($rooms as $room)

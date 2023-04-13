@@ -32,18 +32,18 @@
 
         <tr>
           <td>Alamat</td>
-          <td>: Jl. Kemerdekaan</td>
+          <td>: Jl. Rusa, Bonto Bahari</td>
         </tr>
 
 
         <tr>
           <td>Email</td>
-          <td>: homestaybulkumba@gmail.com</td>
+          <td>: sayasari@gmail.com</td>
         </tr>
 
         <tr>
           <td>No. Telp.</td>
-          <td>: 00000000</td>
+          <td>: 085823327320</td>
         </tr>
 
       </table>

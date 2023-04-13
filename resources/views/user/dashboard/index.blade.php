@@ -26,7 +26,14 @@
           <td>{{$loop->iteration}}</td>
           <td>{{$row->room->title}}</td>
           <td>{{$row->jumlah_hari. ' Hari'}}</td>
-          <td>{{$row->status}}</td>
+          <td>
+            @if ($row->status =='Valid')
+                <div class="badge bg-success"><i class="fa fa-check"></i> {{$row->status}}</div>
+
+            @else
+            <div class="badge bg-warning"><i class="fa fa-spinner"></i> {{$row->status}}</div>
+            @endif
+          </td>
           <td>
             <a href="/room/invoice/{{$row->id}}" class="bt btn-sm btn-info text-decoration-none"><i class="fa fa-info"></i> Detail</a>
           </td>

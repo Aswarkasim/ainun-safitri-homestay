@@ -21,6 +21,8 @@ class CreateRoomsTable extends Migration
             $table->integer('jumlah');
             $table->text('desc');
             $table->text('gambar');
+            $table->integer('kapasitas');
+            $table->enum('available', ['Tersedia', 'Tidak'])->default('Tersedia');
             $table->timestamps();
         });
     }
