@@ -68,6 +68,15 @@
           </div>
           <div class="p-3">
             <a href="" class="text-decoration-none"><h5><b>{{$room->title}}</b></h5></a>
+
+            @if ($room->available == 'Tersedia')
+            <div class="badge bg-success">Tersedia</div><br>
+          @else
+            <div class="badge bg-secondary">Tidak Tersedia</div><br>
+          @endif
+          <div>Kapasitas/Room : {{ $room->kapasitas }} Orang</div>
+
+          
             <span class="text-muted">
               <i class="fa fa-map-marker text-muted"></i> 
               {{$room->alamat}}

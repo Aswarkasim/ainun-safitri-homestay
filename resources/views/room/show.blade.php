@@ -8,7 +8,15 @@
       </div>
       <h4 class="mt-3"><strong>{{$room->title}}</strong></h4>
       <span class="text-success"><i class="fa fa-map-marker"></i><b> {{$room->alamat}}</b></span><br>
-      <small class="text-muted">2 menit yang lalu</small>
+      {{-- <small class="text-muted">2 menit yang lalu</small> --}}
+
+      @if ($room->available == 'Tersedia')
+        <div class="badge bg-success">Tersedia</div><br>
+      @else
+        <div class="badge bg-secondary">Tidak Tersedia</div><br>
+      @endif
+      <div>Kapasitas/Room : {{ $room->kapasitas }} Orang</div>
+
 
       <p>{{$room->desc}}</p>
 
