@@ -5,7 +5,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="p-2"> 
-                    <img src="/img/logo.png" width="200px">
+                    <img src="/img/logo-baru.png" width="200px">
                     <div class="d-flex flex-column"> <span class="font-weight-bold">Kode Tagihan : </span> <small>INV-{{$order->id}}</small> </div>
                 </div>
                 <hr>
