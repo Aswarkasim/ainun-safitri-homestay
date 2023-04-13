@@ -6,7 +6,7 @@
 <nav class="navbar navbar-expand-lg navbar-light shadow-sm rounded" aria-label="Eleventh navbar example">
   <div class="container">
     <a class="navbar-brand" href="/">
-    <img src="/img/logo.png" width="150px" alt="">
+    <img src="/img/logo-baru.png" width="150px" alt="">
     </a>
     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
